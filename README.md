@@ -75,8 +75,7 @@ Make sure Genkit is properly configured.
 ---
 
 Thank you for checking out CAN!  
-For more details, see the full documentation or reach out to the team.
+For more details, see the full documentation[https://github.com/chirontorudrapaul/CAN_v5/blob/main/CAN_Project_Documentation.pdf] or reach out to the team.
 
 ---
 
-**This version is ready to use and will not cause YAML errors.**
