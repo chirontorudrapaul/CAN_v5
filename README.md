@@ -5,9 +5,9 @@
 CAN is a modern, AI-powered e-commerce platform designed for fashion retail. Built with Next.js, TypeScript, and MongoDB, it features a stylish storefront, a robust admin dashboard, and an AI stylist to help users find the perfect look. CAN aims to deliver a seamless shopping and management experience for both customers and store admins.
 
 > The name **CAN** is formed from the initials of the team members:
-> **C**hironto Rudra Paul  
-> **A**rnob Das  
-> **N**ajir Hossain Sahinur
+C from **C**hironto Rudra Paul  
+A from**A**rnob Das  
+N from**N**ajir Hossain Sahinur
 
 ## Team Members & Roles
 
