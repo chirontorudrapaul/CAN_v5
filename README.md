@@ -26,8 +26,8 @@ This project was built by a team of three, each focusing on different areas:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/can-ecommerce.git
-cd can-ecommerce
+[git clone https://github.com/chirontorudrapaul/CAN_v5.git]
+cd CAN_v5
 ```
 
 ### 2. Install Dependencies
