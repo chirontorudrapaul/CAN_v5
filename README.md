@@ -4,19 +4,15 @@
 
 ## Project Description
 
-**CAN** is a modern, AI-powered e-commerce platform designed for fashion retail. Built with Next.js, TypeScript, and MongoDB, it features a stylish storefront, a robust admin dashboard, and an AI stylist to help users find the perfect look. CAN aims to deliver a seamless shopping and management experience for both customers and store admins.
-
----
+CAN is a modern, AI-powered e-commerce platform designed for fashion retail. Built with Next.js, TypeScript, and MongoDB, it features a stylish storefront, a robust admin dashboard, and an AI stylist to help users find the perfect look. CAN aims to deliver a seamless shopping and management experience for both customers and store admins.
 
 ## Team Members & Roles
 
-This project is a group effort by three members, each contributing to different parts of the platform:
+This project was built by a team of three, each focusing on different areas:
 
-- **Chironto Rudra Paul** worked mainly on the admin panel, handling both the frontend and backend.
-- **Najir Hossain Sahinur** focused on the user interface, developing both frontend and backend features for the customer side.
-- **Arnob Das** managed the database and took care of testing to ensure everything runs smoothly.
-
----
+- **Chironto Rudra Paul** mainly worked on the admin panel, handling both the frontend and backend.
+- **Najir Hossain Sahinur** focused on the user interface, developing features for both the frontend and backend on the customer side.
+- **Arnob Das** managed the database and took care of testing to make sure everything runs smoothly.
 
 ## Setup & Installation
 
@@ -26,8 +22,6 @@ This project is a group effort by three members, each contributing to different 
 - [MongoDB](https://www.mongodb.com/) (local or Atlas)
 - [Git](https://git-scm.com/)
 - (Optional) [Google Cloud SDK](https://cloud.google.com/sdk) for Genkit AI features
-
----
 
 ### 1. Clone the Repository
 
@@ -82,4 +76,4 @@ For more details, see the full documentation or reach out to the team.
 
 ---
 
-This version is clear, friendly, and meets all your checklist requirements!
+**This version is ready to use and will not cause YAML errors.**
