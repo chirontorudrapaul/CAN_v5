@@ -1,5 +1,3 @@
----
-
 # CAN - A Modern E-Commerce Platform for Fashion
 
 ## Project Description
