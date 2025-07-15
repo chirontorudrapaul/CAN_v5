@@ -60,7 +60,7 @@ npm run dev
 yarn dev
 ```
 
-Open your browser and go to [http://localhost:3000](http://localhost:3000).
+Open your browser and go to [http://localhost:9002](http://localhost:9002).
 
 ### 5. (Optional) Enable Genkit AI Features
 
