@@ -1,18 +1,31 @@
-
 'use client';
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import Container from '@/components/shared/Container';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { LogIn } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
-import { useRouter, useSearchParams } from 'next/navigation'; 
+import { useToast } from '@/hooks/use-toast';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Please enter a valid email.' }),
@@ -24,7 +37,7 @@ type FormData = z.infer<typeof formSchema>;
 export default function LoginPage() {
   const { toast } = useToast();
   const router = useRouter();
-  const searchParams = useSearchParams(); 
+  const searchParams = useSearchParams();
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -47,17 +60,23 @@ export default function LoginPage() {
 
       if (response.ok && result.token && result.user) {
         toast({
-          title: "Login Successful",
+          title: 'Login Successful',
           description: `Welcome back, ${result.user.name || 'User'}!`,
-          variant: "default",
+          variant: 'default',
         });
 
         localStorage.setItem('authToken', result.token);
         localStorage.setItem('userRole', result.user.role);
-        localStorage.setItem('userId', result.user.id); 
+        localStorage.setItem('userId', result.user.id);
 
-        window.dispatchEvent(new StorageEvent('storage', { key: 'authToken', newValue: result.token, storageArea: localStorage }));
-        
+        window.dispatchEvent(
+          new StorageEvent('storage', {
+            key: 'authToken',
+            newValue: result.token,
+            storageArea: localStorage,
+          })
+        );
+
         const redirectUrl = searchParams.get('redirect');
         if (redirectUrl) {
           router.push(redirectUrl);
@@ -68,17 +87,17 @@ export default function LoginPage() {
         }
       } else {
         toast({
-          title: "Login Failed",
-          description: result.message || "Invalid email or password.",
-          variant: "destructive",
+          title: 'Login Failed',
+          description: result.message || 'Invalid email or password.',
+          variant: 'destructive',
         });
       }
     } catch (error) {
       console.error('Login submission error:', error);
       toast({
-        title: "Login Error",
-        description: "An unexpected error occurred. Please try again.",
-        variant: "destructive",
+        title: 'Login Error',
+        description: 'An unexpected error occurred. Please try again.',
+        variant: 'destructive',
       });
     }
   };
@@ -88,7 +107,7 @@ export default function LoginPage() {
       <Card className="shadow-xl">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl font-headline">Login</CardTitle>
-          <CardDescription>Access your CAN account.</CardDescription>
+          <CardDescription>Access your Cstyle account.</CardDescription>
         </CardHeader>
         <CardContent>
           <Form {...form}>
@@ -100,7 +119,11 @@ export default function LoginPage() {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="your@email.com" {...field} />
+                      <Input
+                        type="email"
+                        placeholder="your@email.com"
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -113,18 +136,29 @@ export default function LoginPage() {
                   <FormItem>
                     <FormLabel>Password</FormLabel>
                     <FormControl>
-                      <Input type="password" placeholder="********" {...field} />
+                      <Input
+                        type="password"
+                        placeholder="********"
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
               <div className="text-sm text-right">
-                <Link href="/forgot-password" className="text-primary hover:underline">
+                <Link
+                  href="/forgot-password"
+                  className="text-primary hover:underline"
+                >
                   Forgot password?
                 </Link>
               </div>
-              <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
+              <Button
+                type="submit"
+                className="w-full"
+                disabled={form.formState.isSubmitting}
+              >
                 {form.formState.isSubmitting ? (
                   'Logging in...'
                 ) : (

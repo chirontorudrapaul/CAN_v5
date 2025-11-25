@@ -40,7 +40,7 @@ export const blogPosts: Omit<BlogPost, 'content'>[] = [
     title: 'Behind the Seams: Our Commitment to Sustainable Fashion',
     date: 'July 5, 2024',
     category: 'Our Brand',
-    excerpt: 'At CAN, we believe in fashion that feels good and does good. Read about our sustainability efforts, from materials to production...',
+    excerpt: 'At Cstyle, we believe in fashion that feels good and does good. Read about our sustainability efforts, from materials to production...',
     image: 'https://images.unsplash.com/photo-1711016948399-70b57cd06d90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdXN0YWluYWJsZSUyMGZhc2hpb24lMjBicmFuZHxlbnwwfHx8fDE3NTExMzIxMzB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'sustainable fashion brand',
   },

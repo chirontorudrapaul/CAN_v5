@@ -1,8 +1,7 @@
-
 import OrderDetailClient from './OrderDetailClient';
 
 export const metadata = {
-  title: 'Order Details - CAN',
+  title: 'Order Details - Cstyle',
   description: 'View the details of your order.',
 };
 
@@ -13,7 +12,5 @@ interface OrderDetailPageProps {
 }
 
 export default function OrderDetailPage({ params }: OrderDetailPageProps) {
-  return (
-    <OrderDetailClient orderId={params.orderId} />
-  );
+  return <OrderDetailClient orderId={params.orderId} />;
 }

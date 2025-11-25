@@ -9,7 +9,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:db": "tsx scripts/test-db-connection.ts",
+    "seed": "node scripts/seed-runner.js"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.8.0",
@@ -47,9 +49,9 @@
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.417.0",
     "mongodb": "^6.9.0",
-    "multer": "^2.0.1",
+    "multer": "^1.4.2",
     "multer-gridfs-storage": "^5.0.2",
-    "next": "15.3.3",
+    "next": "^15.3.3",
     "patch-package": "^8.0.0",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
@@ -71,6 +73,7 @@
     "genkit-cli": "^1.8.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.20.6",
     "typescript": "^5"
   }
 }

@@ -9,7 +9,7 @@ let cachedDb: Db | null = null;
 
 export async function connectToDatabase(): Promise<{ client: MongoClient; db: Db }> {
   const MONGODB_URI = process.env.MONGODB_URI;
-  const MONGODB_DB = process.env.MONGODB_DB_NAME || 'can_ecommerce';
+  const MONGODB_DB = process.env.MONGODB_DB_NAME || 'Cstyle_ecommerce';
 
   if (!MONGODB_URI || MONGODB_URI.trim() === "") {
     const dbConfigError = new Error('Database configuration error: MONGODB_URI environment variable is not defined or is empty.');
@@ -17,7 +17,7 @@ export async function connectToDatabase(): Promise<{ client: MongoClient; db: Db
     console.error('FATAL: MONGODB_URI IS MISSING OR EMPTY IN YOUR .env FILE');
     console.error('Please ensure MONGODB_URI is correctly set in your .env file for the application to connect to the database.');
     console.error('Example for local MongoDB: MONGODB_URI="mongodb://localhost:27017/can_ecommerce"');
-    console.error('Example for MongoDB Atlas: MONGODB_URI="mongodb+srv://<username>:<password>@<cluster-address>/can_ecommerce?retryWrites=true&w=majority"');
+    console.error('Example for MongoDB Atlas: MONGODB_URI="mongodb+srv://<username>:<password>@<cluster-address>/Cstyle_ecommerce?retryWrites=true&w=majority"');
     console.error('------------------------------------------------------');
     throw dbConfigError;
   }
